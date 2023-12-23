@@ -1,98 +1,103 @@
 .popup {
-   display: none;
-   z-index: 1;
-   /*  */
-   position: fixed;
    width: 100%;
    height: 100%;
+
    background-color: rgba(0, 0, 0, 0.8);
+
+   position: fixed;
    top: 0;
    left: 0;
-   /* opacity: 0;
-   visibility: hidden; */
+
    overflow-y: auto;
    overflow-x: hidden;
    transition: all 0.8s ease 0s;
+
+   display: none;
 }
+.is-hiden{
+   opacity: 0;
+   visibility: hidden;
+}
+
 
 .popup.open {
    opacity: 1;
    visibility: visible;
 }
 
-.popup.open .popup-content {
+/* .popup.open .popup-content {
    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
    opacity: 1;
-}
+} */
 
 
-.popup-body {
-   position: absolute;
-   /* min-height: 100%; */
-   /* display: flex;
+ .popup-body {
+   display: flex;
    align-items: center;
-   justify-content: center; */
+   justify-content: center;
+
+   border-radius: 20px;
+   background: #FAFAFA;
+   padding: 40px 20px;
+   transition: all 0.8s ease 0s;
+
+   position: relative;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   padding: 30px 10px;
-   transition: all 0.8s ease 0s;
-}
 
-.popup-content {
+   width: 335px;
+} 
+
+ .popup-content {
    background-color: #fff;
    color: #000;
    max-width: 800px;
-   padding:  54px 20px 20px;
-   position: relative;
    transition: all 0.8s ease 0s;
-   /* opacity: 0; */
-   border-radius: 20px;
-
-}
+} 
 
 .popup-close {
    position: absolute;
-   right: 10px;
-   top: 10px;
+   right: 17px;
+   top: 14px;
    font-size: 20px;
    color: #000;
    text-decoration: none;
-}
-
-.modal-btn {
    width: 22px;
    height: 22px;
-   position: absolute;
-   top: 14px;
-   right: 14px;
 }
-.block {
+
+.btn-close{
+   width: 22px;
+   height: 22px;
+}
+/* Це стилі до самої модальної картки */
+.popup-block-img {
    border-radius: 10px;
    background: #E8E8E2;
    width: 295px;
    height: 212px;
+   margin-top: 4px;
 }
-.info {
-   margin-top: 20px;
-}
-.info-title {
+
+.popup-block-title {
    color: #010101;
 font-family: Neue Montreal;
 font-size: 18px;
 font-style: normal;
 font-weight: 500;
 line-height: 20px; /* 111.111% */
+margin-top: 20px;
 }
-.info-block {
-}
-.info-block-div_first {
-   display: flex;
-   gap: 8px;
-   margin-bottom: 8px;
+.popup-block-info{
    margin-top: 10px;
+   display: flex;
+   flex-direction: column;
 }
-.info-block-div-h5 {
+.order{
+   display: flex;
+}
+.popup-block-info-param {
    color: rgba(1, 1, 1, 0.30);
 font-family: Neue Montreal;
 font-size: 12px;
@@ -100,7 +105,11 @@ font-style: normal;
 font-weight: 400;
 line-height: 14px; /* 116.667% */
 }
-.info-block-div-span {
+.order>.popup-block-info-param {
+   margin-right: 8px;
+   margin-bottom: 9px;
+}
+.info-param-value {
    color: #010101;
 font-family: Neue Montreal;
 font-size: 12px;
@@ -108,24 +117,22 @@ font-style: normal;
 font-weight: 400;
 line-height: 14px; /* 116.667% */
 }
-.info-block-div_sec {
-}
-.inf0-block-p {
+.popup-block-p {
    color: rgba(1, 1, 1, 0.70);
 font-family: Neue Montreal;
 font-size: 14px;
 font-style: normal;
 font-weight: 400;
 line-height: 18px; /* 128.571% */
-width: 295px;
 margin-top: 20px;
-margin-bottom: 40px;
 }
-.info-block-div_price {
+.popup-block-price {
+   margin-top: 40px;
    display: flex;
    justify-content: space-between;
+   align-items: center;
 }
-.info-block-price {
+.popup-block-price-h3 {
    color: #010101;
 font-family: Neue Montreal;
 font-size: 18px;
@@ -133,5 +140,4 @@ font-style: normal;
 font-weight: 500;
 line-height: 20px; /* 111.111% */
 }
-.btn_add {
-}
+
